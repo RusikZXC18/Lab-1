@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    // Завдання 1: Конвертація метрів у сантиметри та міліметри
+    double meters;
+    printf("Введіть довжину в метрах: ");
+    scanf("%lf", &meters);
+    printf("Довжина: %.2f см, %.2f мм\n", meters * 100, meters * 1000);
+
+    // Завдання 2: Обчислення площі кола
+    double radius;
+    printf("Введіть радіус кола: ");
+    scanf("%lf", &radius);
+    printf("Площа кола: %.2f\n", M_PI * radius * radius);
+
+    // Завдання 3: Конвертація секунд у години, хвилини, секунди
+    int total_seconds, hours, minutes, seconds;
+    printf("Введіть кількість секунд: ");
+    scanf("%d", &total_seconds);
+    hours = total_seconds / 3600;
+    minutes = (total_seconds % 3600) / 60;
+    seconds = total_seconds % 60;
+    printf("%d секунд = %d год %d хв %d сек\n", total_seconds, hours, minutes, seconds);
+
+    // Завдання 4: Перевірка на парність
+    int number;
+    printf("Введіть ціле число: ");
+    scanf("%d", &number);
+    if (number % 2 == 0) {
+        printf("Число %d є парним\n", number);
+    } else {
+        printf("Число %d є непарним\n", number);
+    }
+
+    // Завдання 5: Перетворення малої літери у велику
+    char letter;
+    printf("Введіть малу літеру англійського алфавіту: ");
+    scanf(" %c", &letter);
+    if (letter >= 'a' && letter <= 'z') {
+        printf("Велика літера: %c\n", letter - ('a' - 'A'));
+    } else {
+        printf("Це не мала літера англійського алфавіту!\n");
+    }
+    
+    return 0;
+}
