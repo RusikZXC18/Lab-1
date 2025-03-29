@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    // Завдання 1: Поділити два цілих числа 5 і 2 та вивести як float
+    int a = 5, b = 2;
+    float result = (float)a / b;
+    printf("Division result: %.2f\n", result);
+
+    // Завдання 2: Оголосити константну змінну типу float та вивести її значення
+    const float PI = 3.14;
+    printf("Constant PI: %.2f\n", PI);
+
+    // Завдання 3: Оголосити змінну типу char і вивести її ASCII-код
+    char ch = 'A';
+    printf("Character: %c, ASCII code: %d\n", ch, ch);
+
+    // Завдання 4: Користувач вводить ціле і дробове число, вивести їхню суму
+    int intNum;
+    float floatNum;
+    printf("Enter an integer and a float: ");
+    scanf("%d %f", &intNum, &floatNum);
+    printf("Sum: %.2f\n", intNum + floatNum);
+
+    // Завдання 5: Зчитати символ і вивести наступний символ у таблиці ASCII
+    char inputChar;
+    printf("Enter a character: ");
+    scanf(" %c", &inputChar);
+    printf("Next character in ASCII: %c\n", inputChar + 1);
+    
+    return 0;
+}
