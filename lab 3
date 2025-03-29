@@ -1,47 +1,65 @@
 #include <stdio.h>
 #include <math.h>
 
+#define PI 3.14159265359
+
 int main() {
-    // Завдання 1: Конвертація метрів у сантиметри та міліметри
+    // Task 1: Convert meters to centimeters and millimeters
     double meters;
-    printf("Введіть довжину в метрах: ");
+    printf("Enter length in meters: ");
     scanf("%lf", &meters);
-    printf("Довжина: %.2f см, %.2f мм\n", meters * 100, meters * 1000);
+    printf("Length: %.2f cm, %.2f mm\n", meters * 100, meters * 1000);
 
-    // Завдання 2: Обчислення площі кола
+    // Task 2: Calculate the area of a circle
     double radius;
-    printf("Введіть радіус кола: ");
+    printf("Enter the radius of the circle: ");
     scanf("%lf", &radius);
-    printf("Площа кола: %.2f\n", M_PI * radius * radius);
+    printf("Area of the circle: %.2f\n", PI * radius * radius);
 
-    // Завдання 3: Конвертація секунд у години, хвилини, секунди
+    // Task 3: Convert seconds into hours, minutes, and seconds
     int total_seconds, hours, minutes, seconds;
-    printf("Введіть кількість секунд: ");
+    printf("Enter the number of seconds: ");
     scanf("%d", &total_seconds);
     hours = total_seconds / 3600;
     minutes = (total_seconds % 3600) / 60;
     seconds = total_seconds % 60;
-    printf("%d секунд = %d год %d хв %d сек\n", total_seconds, hours, minutes, seconds);
+    printf("%d seconds = %d hours %d minutes %d seconds\n", total_seconds, hours, minutes, seconds);
 
-    // Завдання 4: Перевірка на парність
+    // Task 4: Check if a number is even
     int number;
-    printf("Введіть ціле число: ");
+    printf("Enter an integer: ");
     scanf("%d", &number);
     if (number % 2 == 0) {
-        printf("Число %d є парним\n", number);
+        printf("The number %d is even\n", number);
     } else {
-        printf("Число %d є непарним\n", number);
+        printf("The number %d is odd\n", number);
     }
 
-    // Завдання 5: Перетворення малої літери у велику
+    // Task 5: Convert a lowercase letter to uppercase
     char letter;
-    printf("Введіть малу літеру англійського алфавіту: ");
+    printf("Enter a lowercase English letter: ");
     scanf(" %c", &letter);
     if (letter >= 'a' && letter <= 'z') {
-        printf("Велика літера: %c\n", letter - ('a' - 'A'));
+        printf("Uppercase letter: %c\n", letter - ('a' - 'A'));
     } else {
-        printf("Це не мала літера англійського алфавіту!\n");
+        printf("This is not a lowercase English letter!\n");
+    }
+
+    // Additional Task: Read a string and output it in reverse order
+    char str[100];
+    printf("Enter a string: ");
+    scanf("%s", str);
+    
+    int length = 0;
+    while (str[length] != '\0') {
+        length++;
     }
     
+    printf("Reversed string: ");
+    for (int i = length - 1; i >= 0; i--) {
+        printf("%c", str[i]);
+    }
+    printf("\n");
+
     return 0;
 }
