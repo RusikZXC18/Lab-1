@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    // Task 1: Calculate price after discount
+    int price = 450;
+    int discount = 15;
+    int final_price = price - (price * discount / 100);
+    printf("Price after discount: %d\n", final_price);
+
+    // Task 2: Calculate age
+    int birth_year, current_year;
+    printf("Enter birth year: ");
+    scanf_s("%d", &birth_year);
+    printf("Enter current year: ");
+    scanf_s("%d", &current_year);
+    printf("Your age: %d\n", current_year - birth_year);
+
+    // Task 3: Calculate Euclidean distance
+    double x1, y1, x2, y2, distance;
+    printf("Enter coordinates of first point (x1 y1): ");
+    scanf_s("%lf %lf", &x1, &y1);
+    printf("Enter coordinates of second point (x2 y2): ");
+    scanf_s("%lf %lf", &x2, &y2);
+    distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    printf("Distance between points: %.2f\n", distance);
+
+    // Task 4: Calculate final price after discount
+    double item_price, discount_percent, final_cost;
+    printf("Enter item price: ");
+    scanf_s("%lf", &item_price);
+    printf("Enter discount percentage: ");
+    scanf_s("%lf", &discount_percent);
+    final_cost = item_price - (item_price * discount_percent / 100);
+    printf("Final price: %.2f\n", final_cost);
+
+    // Task 5: Sum of digits of a three-digit number
+    int number, sum = 0;
+    printf("Enter a three-digit number: ");
+    scanf_s("%d", &number);
+    sum += number % 10;
+    number /= 10;
+    sum += number % 10;
+    number /= 10;
+    sum += number;
+    printf("Sum of digits: %d\n", sum);
+
+    return 0;
+}
